@@ -1,0 +1,8 @@
+round0->round1 distinct s0: 256 consistent: True
+sample r-sequences:
+ din byte0=00 : ['d8', '54', 'd0', '30', 'd8', '79']
+ din byte0=01 : ['58', '54', 'd0', '30', '58', '07']
+ din byte0=02 : ['d9', '54', 'd0', '30', 'd9', '76']
+ din byte0=55 : ['72', '54', 'd0', '30', '72', '9d']
+ din byte0=ff : ['27', '54', 'd0', '30', '27', '5b']
+DONE_ROUNDS

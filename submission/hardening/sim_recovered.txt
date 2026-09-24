@@ -1,0 +1,6 @@
+encrypt(59C359C3) = 9cd84392  (expect 9CD84392)
+  PASS
+decrypt(9cd84392) = 59c359c3  (expect 59C359C3)
+  PASS
+VALIDATE: ALL PASS
+tb/tb_validate.v:36: $finish called at 1460000 (1ps)

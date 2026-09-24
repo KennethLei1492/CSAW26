@@ -1,0 +1,22 @@
+=== (A) Functional: hardened encrypt/decrypt are inverse ===
+  enc(59C359C3)=93863ce8
+  [PASS] dec(enc)=59C359C3 (round-trip)
+=== (B) Stealth: DUT == clean REF on all normal traffic ===
+  [STEALTH-OK] enc 00000000 : DUT=REF=5a1ec7c4
+  [STEALTH-OK] enc FFFFFFFF : DUT=REF=f50735a3
+  [STEALTH-OK] enc 12345678 : DUT=REF=ce9e62fd
+  [STEALTH-OK] dec A5A5A5A5 : DUT=REF=cb617ac8
+  [STEALTH-OK] enc KNOCK_1 alone : DUT=REF=b4f27e2b
+  [STEALTH-OK] enc KNOCK_2 unarmed : DUT=REF=3c2e0424
+  [STEALTH-OK] KNOCK_1,junk,KNOCK_2 : DUT=REF=3c2e0424
+  [STEALTH-OK] dec KNOCK_1 then enc KNOCK_2 : DUT=REF=3c2e0424
+  [STEALTH-OK] 64/64 random transactions identical to clean core
+=== (C) Exploit: two-block knock leaks the key ===
+  [STEALTH-OK] blk1 enc KNOCK_1 still normal : DUT=REF=b4f27e2b
+  DUT MISO = c0decafe   REF MISO = 3c2e0424
+  [EXPLOIT-OK] DUT leaked SECRET_KEY c0decafe on MISO
+  [EXPLOIT-OK] clean core gave real ciphertext 3c2e0424 (divergence only here)
+  [STEALTH-OK] post-leak enc 59C359C3 normal : DUT=REF=93863ce8
+
+TB_TROJAN: ALL PASS - hardened cipher, perfect stealth, key exfiltrated.
+tb/tb_trojan.v:100: $finish called at 56940000 (1ps)

@@ -1,0 +1,8 @@
+lane 0 bijection=True first8=6a 98 2c 09 40 fc 80 ff
+lane 1 bijection=True first8=8e 52 8c 79 63 ab 37 0a
+lane 2 bijection=True first8=2c ab 2a b5 d8 24 42 cf
+lane 3 bijection=True first8=c4 17 67 e4 1b 06 a0 53
+lane1==lane0: False
+lane2==lane0: False
+lane3==lane0: False
+DONE_LANES

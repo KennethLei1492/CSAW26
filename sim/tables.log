@@ -1,0 +1,9 @@
+ENC lane0 bijection=True
+  dec==enc^-1: True
+ENC lane1 bijection=True
+  dec==enc^-1: True
+ENC lane2 bijection=True
+  dec==enc^-1: True
+ENC lane3 bijection=True
+  dec==enc^-1: True
+DONE_TABLES
