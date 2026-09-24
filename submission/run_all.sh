@@ -1,3 +1,4 @@
+REPO_URL="${CSAW26_REPO:-https://github.com/KennethLei1492/CSAW26.git}"
 #!/usr/bin/env bash
 # ============================================================================
 # run_all.sh  -  one-click pipeline: bitstream -> netlist -> cipher recovery ->
